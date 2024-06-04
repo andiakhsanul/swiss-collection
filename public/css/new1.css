@@ -1,0 +1,56 @@
+.recipe-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 50px;
+}
+.recipe-image {
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 50px;
+    border: 0.5px solid black;
+}
+   
+.card {
+    overflow: hidden; /* Prevent text from overflowing */
+    border: 1px solid #ddd; /* Optional: Add a border */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.card-body {
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis (...) to truncated text */
+}
+
+.card-text {
+    white-space: normal; /* Allow text to wrap within the card */
+    overflow: hidden; /* Prevent overflow */
+    text-overflow: ellipsis; /* Add ellipsis (...) to truncated text */
+}
+.horizontal-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    display: flex;
+}
+.horizontal-scroll .card {
+    display: inline-block;
+    width: 300px;
+    margin-right: 30px; /* Adjust this width as needed */
+    flex-shrink: 0;
+
+}
