@@ -16,4 +16,9 @@ class recipe extends Model
     {
         return $this->belongsToMany(catRecipe::class, 'catRecipe_recipe', 'recipe_id', 'category_id');
     }
+
+    public function favoritedBy()
+    {
+        return $this->belongsToMany(User::class, 'favorited_recipes')->withTimestamps();
+    }
 }

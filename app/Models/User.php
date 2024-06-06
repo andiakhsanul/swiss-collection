@@ -50,5 +50,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-    
+
+    public function favoritedRecipes()
+    {
+        return $this->belongsToMany(Recipe::class, 'favorited_recipes')->withTimestamps();
+    }
+
 }

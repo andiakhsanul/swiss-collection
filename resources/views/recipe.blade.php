@@ -8,7 +8,7 @@
 	<title>Simple House Template</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />
 	<link href="{{ asset('css/templatemo-style.css') }}" rel="stylesheet" />
-	
+
 </head>
 <!--
 
@@ -71,7 +71,7 @@ https://templatemo.com/tm-539-simple-house
 			// Determine the number of recipes in the current category
 			$recipeCount = count($category->recipe);
 			@endphp
-	
+
 			@switch($recipeCount)
 			@case(1)
 				@foreach($category->recipe as $recipe)
@@ -86,7 +86,7 @@ https://templatemo.com/tm-539-simple-house
 				</article>
 				@endforeach
 				@break
-	
+
 			@case(2)
 				@foreach($category->recipe as $recipe)
 				<article class="col-sm-6 tm-gallery-item">
@@ -113,7 +113,7 @@ https://templatemo.com/tm-539-simple-house
 				</article>
 				@endforeach
 				@break
-	
+
 			@default
 				@foreach($category->recipe as $recipe)
 				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
@@ -130,7 +130,7 @@ https://templatemo.com/tm-539-simple-house
 		</div>
 		@endforeach
 	</div>
-  
+
 
 <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/parallax.min.js') }}"></script>

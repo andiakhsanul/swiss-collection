@@ -166,7 +166,9 @@
                 <input type="text" name="first_name" placeholder="First Name" value="{{ $user->first_name }}">
                 <input type="text" name="last_name" placeholder="Last Name" value="{{ $user->last_name }}">
                 <input type="email" name="email" placeholder="Email" value="{{ $user->email }}">
-                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="password" placeholder="Password"  >
+                <input type="password" name="confirm_password" placeholder="Confirm Password">
+
                 <button type="submit">Update Profile</button>
             </form>
             <a href="{{ route('logout') }}" class="logout-button">Logout</a>

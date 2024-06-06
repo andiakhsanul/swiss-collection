@@ -14,31 +14,42 @@
 <!-- position relative itu artinya klo ditumpuk divnya kebawah dibawah kebalikannya absolut yg selalu di atas -->
 
 <body>
+    @if ($errors->any())
+    <div class="error-message">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
     <div class="container" id="container" style="height: 100vh; width: 100%;">
         <div class="form-container sign-up-container">
-            <form action="{{ route('add') }}" method="post">
-                @method('POST')
-                @csrf
-                <h1>Create Account</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-twitter"></i></a>
-                </div>
-                <span>or use your email for registration</span>
-                <input type="hidden" name="ID_user" value="auto" id="ID_user">
-                <input type="text" placeholder="First Name" id="first_name" name="first_name" />`
-                <input type="text" placeholder="Last Name" id="last_name" name="last_name" />`
-                <input type="email" placeholder="Email" id="email" name="email" />
-                <input type="hidden" name="is_user" value="1">
-                <input type="password" placeholder="Password" id="password" name="password" />
-                <input type="text" list="genderList" name="jenis_kelamin" id="jenis_kelamin">
-                <datalist id="genderList">
-                    <option value="laki-laki">
-                    <option value="perempuan">
-                </datalist>
-                <button type="submit " value="Create">Sign Up</button>
-            </form>
+<form action="{{ route('add') }}" method="post">
+    @method('POST')
+    @csrf
+    <h1>Create Account</h1>
+    <div class="social-container">
+        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#" class="social"><i class="fab fa-twitter"></i></a>
+    </div>
+    <span>or use your email for registration</span>
+    <input type="hidden" name="ID_user" value="auto" id="ID_user">
+    <input type="text" placeholder="First Name" id="first_name" name="first_name" />
+    <input type="text" placeholder="Last Name" id="last_name" name="last_name" />
+    <input type="email" placeholder="Email" id="email" name="email" />
+    <input type="hidden" name="is_user" value="1">
+    <input type="password" placeholder="Password" id="password" name="password" />
+    <input type="password" placeholder="Confirm Password" id="confirm_password" name="confirm_password" />
+    <input type="text" list="genderList" name="jenis_kelamin" id="jenis_kelamin">
+    <datalist id="genderList">
+        <option value="laki-laki">
+        <option value="perempuan">
+    </datalist>
+    <button type="submit" value="Create">Sign Up</button>
+</form>
+
         </div>
         <div class="form-container sign-in-container">
             <form action="{{ route('auth') }}" method="post">
