@@ -63,8 +63,9 @@ contohnya class di icon twitter di footer untuk menggunakannya kita harus beri n
                             <li class="scroll-to-section"><a href="/video">Workout Video</a></li>
                             <li class="scroll-to-section"><a href="/recipe">Recipes</a></li>
                             <li class="scroll-to-section"><a href="/about">About</a></li>
+                            <li class="scroll-to-section"><a href="/favorites">Favrecipe</a></li>
                             <li class="main-button">
-                        
+
     @if (Auth::check())
         <!-- Jika sudah login, tampilkan nama pengguna dan tombol dropdown -->
         <div class="dropdown">
@@ -132,7 +133,7 @@ contohnya class di icon twitter di footer untuk menggunakannya kita harus beri n
                         <li class="feature-item">
                             <div class="left-icon">
                                 <img src="{{ asset('images/recipe-book.png') }}" alt="training fifth"
-                                    style="height: 20%; width: 20%;"> 
+                                    style="height: 20%; width: 20%;">
                             <div class="right-content">
                                 <h4>Recipes</h4>
                                 <p>Menyediakan berbagai resep masakan sehat untuk mendukung program workout anda.</p>
@@ -175,7 +176,7 @@ contohnya class di icon twitter di footer untuk menggunakannya kita harus beri n
                         <!-- <li class="feature-item">
                             <div class="left-icon">
                                 <img src="{{ asset('images/recipe-book.png') }}" alt="training fifth"
-                                    style="height: 20%; width: 20%;"> 
+                                    style="height: 20%; width: 20%;">
                             </div>
                             <div class="right-content">
                                 <h4>Recipes</h4>
@@ -248,7 +249,7 @@ contohnya class di icon twitter di footer untuk menggunakannya kita harus beri n
                         <article id='tabs-2'>
                             <img src="{{ asset('images/training-image-02.jpg') }}" alt="Moderate To Advanced">
                             <h4>Moderate To Advanced</h4>
-                            <p>Jika Anda mencari sesuatu yang mendorong Anda lebih keras, 
+                            <p>Jika Anda mencari sesuatu yang mendorong Anda lebih keras,
                                 cobalah salah satu tantangan tingkat menengah hingga lanjutan berikut untuk membantu Anda maju lebih jauh.</p>
                             <!-- <div class="main-button">
                                 <a href="#">View Schedule</a> -->
@@ -273,7 +274,7 @@ contohnya class di icon twitter di footer untuk menggunakannya kita harus beri n
                         <article id='tabs-5'>
                             <img src="{{ asset('images/training-image-01.jpg') }}" alt="Strength Training">
                             <h4>Strength Training</h4>
-                            <p>Jika Anda ingin melatih kekuatan Anda, lihatlah program berbasis resistensi ini. 
+                            <p>Jika Anda ingin melatih kekuatan Anda, lihatlah program berbasis resistensi ini.
                                 Active Well merekomendasikan untuk memiliki resistance band dan berbagai dumbel ringan, sedang, dan berat,</p>
                             <!-- <div class="main-button">
                                 <a href="#">View Schedule</a>
@@ -430,7 +431,7 @@ contohnya class di icon twitter di footer untuk menggunakannya kita harus beri n
 
                     <hr class="w-100 clearfix d-md-none" />
 
-            
+
 
                     <hr class="w-100 clearfix d-md-none" />
 

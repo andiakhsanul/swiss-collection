@@ -17,7 +17,7 @@ Simple House
 https://templatemo.com/tm-539-simple-house
 
 -->
-<body> 
+<body>
 
 	<div class="container">
 	<!-- Top box -->
@@ -27,19 +27,19 @@ https://templatemo.com/tm-539-simple-house
 				<div class="tm-header">
 					<div class="row tm-header-inner">
 						<div class="col-md-6 col-12">
-							<img src="{{ asset('images/simple-house-logo.png') }}" alt="Logo" class="tm-site-logo" /> 
+							<img src="{{ asset('images/simple-house-logo.png') }}" alt="Logo" class="tm-site-logo" />
 							<div class="tm-site-text-box">
 								<h1 class="tm-site-title">About us</h1>
-								<h6 class="tm-site-description">Mengenai Active Well</h6>	
+								<h6 class="tm-site-description">Mengenai Active Well</h6>
 							</div>
 						</div>
 						<nav class="col-md-6 col-12 tm-nav">
 							<ul class="tm-nav-ul">
-								<li class="tm-nav-li"><a href="/index" class="tm-nav-link">Home</a></li>
+								<li class="tm-nav-li"><a href="/" class="tm-nav-link">Home</a></li>
 								<li class="tm-nav-li"><a href="/about" class="tm-nav-link active">About</a></li>
 								<li class="tm-nav-li"><a href="contact.html" class="tm-nav-link">Contact</a></li>
 							</ul>
-						</nav>	
+						</nav>
 					</div>
 				</div>
 			</div>
@@ -52,14 +52,14 @@ https://templatemo.com/tm-539-simple-house
 			</header>
 
 			<h2 class="col-12 text-center tm-section-title"style="color:  #ed563b;"> Latar Belakang</h2>
-			<p class="col-12 text-center">Active Well adalah solusi inovatif yang lahir dari kesadaran akan tantangan kesehatan dan kebugaran di era modern yang serba sibuk dan padat. 
-				Dengan pola hidup kurang aktif dan pola makan yang kurang sehat semakin merajalela, Active Well hadir sebagai solusi praktis bagi individu yang ingin tetap aktif dan sehat tanpa harus meninggalkan kenyamanan rumah mereka. 
+			<p class="col-12 text-center">Active Well adalah solusi inovatif yang lahir dari kesadaran akan tantangan kesehatan dan kebugaran di era modern yang serba sibuk dan padat.
+				Dengan pola hidup kurang aktif dan pola makan yang kurang sehat semakin merajalela, Active Well hadir sebagai solusi praktis bagi individu yang ingin tetap aktif dan sehat tanpa harus meninggalkan kenyamanan rumah mereka.
 				Melalui fitur video workout yang dapat diakses secara online dan koleksi resep makanan diet sehat, Active Well memberikan akses mudah bagi pengguna untuk menjaga kesehatan dan kebugaran mereka sesuai dengan kebutuhan nutrisi individu.
 				Diharapkan bahwa Active Well dapat membantu pengguna mencapai gaya hidup yang lebih sehat dan seimbang dengan cara yang sederhana dan mudah diakses.</p>
 
 			<h2 class="col-12 text-center tm-section-title" style="margin-top: 100px; color :#ed563b"> Tujuan Active Well</h2>
 			<p class="col-12 text-center">
-				1. Memberikan solusi praktis bagi individu yang sulit menyisihkan waktu untuk berolahraga di pusat kebugaran seperti gym atau fitness atau mencari informasi tentang gaya hidup sehat.         
+				1. Memberikan solusi praktis bagi individu yang sulit menyisihkan waktu untuk berolahraga di pusat kebugaran seperti gym atau fitness atau mencari informasi tentang gaya hidup sehat.
 				2. Membantu pengguna tetap termotivasi dan konsisten dalam menjalankan program kebugaran dan pola makan sehat.
 				3. Menyediakan informasi yang jelas dan konsisten dalam memberikan panduan bagi pengguna dalam menjalani gaya hidup sehat.</p>
 
@@ -134,7 +134,7 @@ https://templatemo.com/tm-539-simple-house
 				<div class="row">
 					<div class="col-12">
 						<div class="placeholder-2">
-							<div class="parallax-window-2" data-parallax="scroll" data-image-src="assets/img/about-05.jpg"></div>		
+							<div class="parallax-window-2" data-parallax="scroll" data-image-src="assets/img/about-05.jpg"></div>
 						</div>
 					</div>
 				</div>
@@ -169,12 +169,12 @@ https://templatemo.com/tm-539-simple-house
 					<div class="col-12">
 						<div class="tm-history-inner">
 							<img src="assets/img/about-06.jpg" alt="Image" class="img-fluid tm-history-img" />
-							<div class="tm-history-text"> 
+							<div class="tm-history-text">
 								<h4 class="tm-history-title">History of our restaurant</h4>
 								<p class="tm-mb-p">Sed ligula risus, interdum aliquet imperdiet sit amet, auctor sit amet justo. Maecenas posuere lorem id augue interdum vehicula. Praesent sed leo eget libero ultricies congue.</p>
 								<p>Redistributing this template as a downloadable ZIP file on any template collection site is strictly prohibited. You will need to <a href="https://templatemo.com/contact">contact TemplateMo</a> for additional permissions about our templates. Thank you.</p>
 							</div>
-						</div>	
+						</div>
 					</div>
 				</div>
 			</div> -->
@@ -184,7 +184,7 @@ https://templatemo.com/tm-539-simple-house
 			<p></p>
 		</footer>
 	</div>
-   
+
 </body>
 <script src="{{ asset('js/jquery-2.1.0.min.js') }}"></script>
 <script src="{{ asset('js/parallax.min.js') }}"></script>

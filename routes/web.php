@@ -14,6 +14,7 @@ use App\Http\Controllers\catProgramController;
 use App\Http\Controllers\CategoryVideoController;
 use App\Models\recipe;
 use App\Models\catRecipe;
+use App\Http\Controllers\FavRecipeController; // Add this line
 
 
 Route::get('/', function () {
@@ -86,4 +87,10 @@ Route::controller(UserController::class)->group(function (){
     Route::post('/auth', 'login')->name('auth');
     Route::get('/logout', 'Logout')->name('logout');
     Route::put('/edit', 'edit')->name('edit');
+});
+
+Route::controller(FavRecipeController::class)->group(function () {
+    Route::get('/favorites', [FavRecipeController::class, 'index']);
+    Route::post('/favorites/{recipe}', [FavRecipeController::class, 'store'])->name('favorite');
+    Route::delete('/favorites', [FavRecipeController::class, 'unstore']);
 });
