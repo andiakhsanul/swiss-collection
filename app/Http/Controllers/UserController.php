@@ -27,6 +27,7 @@ class UserController extends Controller
 
         if($request->password != $request->confirm_password){
             return redirect()->back()->with('error', 'Password dan konfirmasi password tidak cocok');
+
         }else{
             $user = User::create([
                 'first_name' => $request->first_name,

@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
 
 
-    <style>
-        /* public/css/styles.css */
+<style>
+/* public/css/styles.css */
 
 .container {
     padding: 20px;
@@ -52,13 +52,27 @@ h1 {
     border-radius: 8px;
 }
 
-    </style>
+.btn-danger {
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c;
+    border-color: #ac2925;
+}
+</style>
 
 </head>
 <body>
 <div class="container">
-       <div class="container">
     <h1 class="text-center mb-4">Your Favorite Recipes</h1>
+    @if(session('message'))
+        <div class="alert alert-success">{{ session('message') }}</div>
+    @elseif(session('error'))
+        <div class="alert alert-danger">{{ session('error') }}</div>
+    @endif
     @if($favoritedRecipes->isEmpty())
         <p class="text-center">No favorite recipes yet.</p>
     @else
@@ -69,6 +83,7 @@ h1 {
                         <th scope="col">Recipe Name</th>
                         <th scope="col">Recipe Image</th>
                         <th scope="col">Description</th>
+                        <th scope="col">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -76,9 +91,18 @@ h1 {
                         <tr>
                             <td>{{ $favoritedRecipe->recipe->judul_recipe }}</td>
                             <td>
-                                <img src="{{ asset('storage/' . $favoritedRecipe->recipe->gambar_recipe) }}" alt="{{ $favoritedRecipe->recipe->judul_recipe }}" style="max-width: 100px; height: auto;">
+                                <img src="{{ asset('storage/' . $favoritedRecipe->recipe->gambar_recipe) }}" alt="{{ $favoritedRecipe->recipe->judul_recipe }}" class="recipe-image">
                             </td>
                             <td>{{ $favoritedRecipe->recipe->deskripsi_recipe }}</td>
+                            <td>
+                                <form action="{{ route('unfavorite', $favoritedRecipe->recipe->id_recipe) }}" method="POST" style="display:inline;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">
+                                        <i class="fa fa-heart-broken"></i> Unfavorite
+                                    </button>
+                                </form>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

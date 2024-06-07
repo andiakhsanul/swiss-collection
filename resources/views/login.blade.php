@@ -14,6 +14,7 @@
 <!-- position relative itu artinya klo ditumpuk divnya kebawah dibawah kebalikannya absolut yg selalu di atas -->
 
 <body>
+
     @if ($errors->any())
     <div class="error-message">
         <ul>
@@ -24,8 +25,9 @@
     </div>
 @endif
     <div class="container" id="container" style="height: 100vh; width: 100%;">
+
         <div class="form-container sign-up-container">
-<form action="{{ route('add') }}" method="post">
+        <form action="{{ route('add') }}" method="post">
     @method('POST')
     @csrf
     <h1>Create Account</h1>

@@ -43,18 +43,16 @@ class FavRecipeController extends Controller
     }
 
     // Menghapus resep dari daftar favorit pengguna yang sedang login
-    public function unstore(Request $request)
+    public function unstore($recipeId)
     {
         $user = Auth::user();
-        $recipeId = $request->input('recipe_id');
-
         $favoritedRecipe = FavoritedRecipe::where('user_id', $user->id)->where('recipe_id', $recipeId)->first();
 
         if ($favoritedRecipe) {
             $favoritedRecipe->delete();
-            return response()->json(['message' => 'Recipe unfavorited successfully'], 200);
+            return redirect()->route('favorites.index')->with('message', 'Recipe unfavorited successfully');
         }
 
-        return response()->json(['message' => 'Recipe not found in favorites'], 404);
+        return redirect()->route('favorites.index')->with('error', 'Recipe not found in favorites');
     }
 }
