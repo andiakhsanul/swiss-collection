@@ -27,7 +27,7 @@
                     <i class="fa fa-users  mb-2" style="font-size: 70px;"></i>
                     <h4 style="color:white;">Total Users</h4>
                     <h5 style="color:white;"> {{ $user }} </h5>
-                       
+
                 </div>
             </div>
             <div class="col-sm-3">
@@ -51,12 +51,19 @@
                     <h5 style="color:white;"> {{ $Program }}  </h5>
                 </div>
             </div>
+            <div class="col-sm-3">
+                <div class="card" style="background-color:#ED563B ;">
+                    <i class="fa fa-heart mb-2" style="font-size: 70px;"></i>
+                    <h4 style="color:white;">Total favorit</h4>
+                    <h5 style="color:white;"> {{ $favrecipe }}  </h5>
+                </div>
+            </div>
         </div>
 
     </div>
 
 
-  
+
 
 
     <script type="text/javascript" src="./assets/js/ajaxWork.js"></script>

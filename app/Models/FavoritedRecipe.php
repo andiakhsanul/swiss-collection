@@ -20,4 +20,9 @@ class FavoritedRecipe extends Model
     {
         return $this->belongsTo(Recipe::class, 'recipe_id');
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

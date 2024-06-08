@@ -12,8 +12,9 @@
     <a href="{{ route('recipe') }}"><i class="fa fa-cutlery"></i> Recipe</a>
     <a href="{{ route('video') }}" ><i class="fa fa-video-camera"></i> Video</a>
     <a href="{{ route('program') }}"><i class="fa fa-th"></i> Program</a>
+    <a href="{{ route('admin.favorites.index') }}"><i class="fa fa-heart"></i> favorit</a>
     <a href="{{ route('logout') }}"><i class="fa fa-caret-square-o-left"></i> Logout</a>
-    
+
 
     <!---->
 </div>

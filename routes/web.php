@@ -79,6 +79,7 @@ Route::prefix('/admin')->group(function(){
     Route::get('/user/edit/{id}', [AdminController::class, 'UserForm'])->name('editUser');
     Route::put('/user/edit/{id}', [AdminController::class, 'updateUser'])->name('updateUser');
     Route::delete('/user/delete/{id}', [AdminController::class, 'deleteUser'])->name('deleteUser');
+    Route::get('/admin/favorites', [AdminController::class, 'favindex'])->name('admin.favorites.index');
 });
 
 Route::controller(UserController::class)->group(function (){

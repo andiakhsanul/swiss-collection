@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use App\Models\CategoriesVideo;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Models\FavoritedRecipe;
 
 class AdminController extends Controller
 {
@@ -20,7 +21,9 @@ class AdminController extends Controller
         $Video = Video::count();
         $Program = Program::count();
         $recipe = recipe::count();
-        return view('admin.index', compact('user','Video', 'Program', 'recipe'));
+        $favrecipe = FavoritedRecipe::count();
+        // dd($favrecipe);
+        return view('admin.index', compact('user','Video', 'Program', 'recipe', 'favrecipe'));
     }
     public function Program(){
         $Program = Program::with('categories')->get();
@@ -30,7 +33,7 @@ class AdminController extends Controller
     public function Recipe (){
         $recipe = recipe::with('categories')->get();
         $cat = catRecipe::all();
-       
+
         return view("admin.viewAllRecipe", compact('recipe', 'cat' ));
     }
     public function Video (){
@@ -64,5 +67,13 @@ class AdminController extends Controller
         $user = User::findOrFail($id);
         $user->delete();
         return redirect()->intended('/admin/user');
+    }
+
+
+    public function favindex()
+    {
+        $allFavorites = FavoritedRecipe::with(['user', 'recipe'])->get();
+        // dd($allFavorites);
+        return view('admin.viewAllFavoritrecipe', compact('allFavorites'));
     }
 }
