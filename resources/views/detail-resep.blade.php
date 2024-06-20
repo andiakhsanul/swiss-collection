@@ -25,7 +25,7 @@
             <form action="{{ route('favorite', $recipe->id_recipe) }}" method="POST" style="display:inline;">
                 @csrf
                 <button type="submit" class="btn btn-primary">
-                    <i class="fa fa-heart"></i> Love
+                    <i class="fa fa-heart"></i> Add To Favorite
                 </button>
             </form>
             </br>

@@ -90,8 +90,8 @@ Route::controller(UserController::class)->group(function (){
     Route::put('/edit', 'edit')->name('edit');
 });
 
-Route::controller(FavRecipeController::class)->group(function () {
-    Route::get('/favorites', [FavRecipeController::class, 'index'])->name('favorites.index');
-    Route::post('/favorites/{recipe}', [FavRecipeController::class, 'store'])->name('favorite');
-    Route::delete('/favorites/{id}', [FavRecipeController::class, 'unstore'])->name('unfavorite');
+Route::middleware(['auth'])->controller(FavRecipeController::class)->group(function () {
+    Route::get('/favorites', 'index')->name('favorites.index');
+    Route::post('/favorites/{recipe}', 'store')->name('favorite');
+    Route::delete('/favorites/{id}', 'unstore')->name('unfavorite');
 });

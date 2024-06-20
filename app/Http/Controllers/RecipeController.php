@@ -7,6 +7,7 @@ use App\Models\recipe;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Log;
 
 class RecipeController extends Controller
 {
@@ -55,12 +56,42 @@ class RecipeController extends Controller
         return view('admin.editRecipe', compact('recipe', 'cat'));
 
     }
-    public function update (Request $request,$id){
-        $recipe=recipe::findOrFail($id);
-        $recipe->update($request->except('categories'));
+    public function update(Request $request, $id)
+    {
+        try {
+            // Temukan recipe berdasarkan ID
+            $recipe = Recipe::findOrFail($id);
 
+            // Jika ada gambar yang diunggah
+            if ($request->hasFile('gambar_recipe')) {
+                // Hapus gambar lama jika ada
+                if ($recipe->gambar_recipe) {
+                    Storage::disk('public')->delete($recipe->gambar_recipe);
+                }
 
-        $recipe->categories()->sync($request->input('categories', []));
-        return redirect()->intended('admin/recipe');
+                // Simpan gambar baru
+                $path = $request->file('gambar_recipe')->store('recipe_image', 'public');
+                $recipe->gambar_recipe = $path;
+            }
+
+            // Update data recipe
+            $recipe->judul_recipe = $request->judul_recipe;
+            $recipe->durasi_recipe = $request->durasi_recipe;
+            $recipe->deskripsi_recipe = $request->deskripsi_recipe;
+            $recipe->bahan_recipe = $request->bahan_recipe;
+            $recipe->cara_masak = $request->cara_masak;
+            $recipe->url_recipe = $request->url_recipe;
+            $recipe->save();
+
+            // Sinkronkan kategori
+            $recipe->categories()->sync($request->input('categories', []));
+
+            // Redirect ke halaman yang diinginkan setelah berhasil update
+            return redirect()->intended('admin/recipe');
+        } catch (\Exception $e) {
+            // Tangani exception di sini, misalnya log dan kembalikan pesan kesalahan
+            Log::error('Error updating recipe: ' . $e->getMessage());
+            return back()->withError('Gagal mengupdate resep. Silakan coba lagi.');
+        }
     }
 }

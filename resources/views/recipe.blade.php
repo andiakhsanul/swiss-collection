@@ -27,7 +27,7 @@ https://templatemo.com/tm-539-simple-house
 		<div class="placeholder">
 			<div class="parallax-window">
 			<img src="{{ asset('images/recipes.jpg') }}" alt="bg" style="width: 100%; height:100vh">
-
+			<div style="height: 100vh; position: absolute; background-color: rgba(35, 45, 57, 0.8); top: 0; left: 0; bottom: 7px; width: 100%;"></div>
 				<div class="tm-header">
 					<div class="row tm-header-inner">
 						<div class="col-md-6 col-12">

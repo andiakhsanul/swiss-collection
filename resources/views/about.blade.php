@@ -37,7 +37,7 @@ https://templatemo.com/tm-539-simple-house
 							<ul class="tm-nav-ul">
 								<li class="tm-nav-li"><a href="/" class="tm-nav-link">Home</a></li>
 								<li class="tm-nav-li"><a href="/about" class="tm-nav-link active">About</a></li>
-								<li class="tm-nav-li"><a href="contact.html" class="tm-nav-link">Contact</a></li>
+								<!-- <li class="tm-nav-li"><a href="contact.html" class="tm-nav-link">Contact</a></li> -->
 							</ul>
 						</nav>
 					</div>
@@ -73,11 +73,11 @@ https://templatemo.com/tm-539-simple-house
 								<h4 class="tm-person-name">Jania Elysia Andiani</h4>
 								<p class="tm-person-title">187221057</p>
 								<p class="tm-person-about"></p>
-								<div>
+								<!-- <div>
 									<a href="https://fb.com" class="tm-social-link"><i class="fab fa-facebook tm-social-icon"></i></a>
 									<a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter tm-social-icon"></i></a>
 									<a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram tm-social-icon"></i></a>
-								</div>
+								</div> -->
 							</figcaption>
 						</figure>
 					</article>
@@ -88,11 +88,11 @@ https://templatemo.com/tm-539-simple-house
 								<h4 class="tm-person-name">Octavia Putri Yudhistira</h4>
 								<p class="tm-person-title">187221063</p>
 								<p class="tm-person-about"></p>
-								<div>
+								<!-- <div>
 									<a href="https://fb.com" class="tm-social-link"><i class="fab fa-facebook tm-social-icon"></i></a>
 									<a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter tm-social-icon"></i></a>
 									<a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram tm-social-icon"></i></a>
-								</div>
+								</div> -->
 							</figcaption>
 						</figure>
 					</article>

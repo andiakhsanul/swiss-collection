@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -160,18 +158,31 @@
         <p>Selamat datang, {{ $user->full_name }}!</p>
         <p>Email: {{ $user->email }}</p>
         <div class="user-info">
-            <form action="{{ route('edit') }}" method="POST">
+            <form id="updateForm" action="{{ route('edit') }}" method="POST">
                 @method('PUT')
                 @csrf
                 <input type="text" name="first_name" placeholder="First Name" value="{{ $user->first_name }}">
                 <input type="text" name="last_name" placeholder="Last Name" value="{{ $user->last_name }}">
                 <input type="email" name="email" placeholder="Email" value="{{ $user->email }}">
-                <input type="password" name="password" placeholder="Password"  >
-                <input type="password" name="confirm_password" placeholder="Confirm Password">
+                <input type="password" id="password" name="password" placeholder="Password">
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password">
 
                 <button type="submit">Update Profile</button>
             </form>
             <a href="{{ route('logout') }}" class="logout-button">Logout</a>
+        </div>
+    </div>
+    <script>
+        document.getElementById('updateForm').addEventListener('submit', function (event) {
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirm_password').value;
+
+            if (password !== confirmPassword) {
+                event.preventDefault(); // Mencegah pengiriman form
+                alert('Password dan konfirmasi password tidak cocok.');
+            }
+        });
+    </script>
 </body>
 
 </html>

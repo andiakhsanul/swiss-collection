@@ -45,10 +45,10 @@
     }
 
     .recipe-image {
-        width: 100%;
-        height: auto;
+        width: 50%;
+        height: 50%;
         border-radius: 8px;
-        object-fit: cover; /* Ensures the image covers the entire area without distortion */
+         /* Ensures the image covers the entire area without distortion */
     }
 
     .btn-danger {
@@ -87,9 +87,11 @@
                 <tbody>
                     @foreach($favoritedRecipes as $favoritedRecipe)
                         <tr>
-                            <td>{{ $favoritedRecipe->recipe->judul_recipe }}</td>
+                            <td><a href="{{ route('resep.show', $favoritedRecipe->recipe->id_recipe) }}">{{ $favoritedRecipe->recipe->judul_recipe }}</a></td>
                             <td>
-                                <img src="{{ asset('storage/' . $favoritedRecipe->recipe->gambar_recipe) }}" alt="{{ $favoritedRecipe->recipe->judul_recipe }}" class="recipe-image">
+                                <a href="{{ route('resep.show', $favoritedRecipe->recipe->id_recipe) }}">
+                                    <img src="{{ asset('storage/' . $favoritedRecipe->recipe->gambar_recipe) }}" alt="{{ $favoritedRecipe->recipe->judul_recipe }}" class="recipe-image">
+                                </a>
                             </td>
                             <td>{{ $favoritedRecipe->recipe->deskripsi_recipe }}</td>
                             <td>

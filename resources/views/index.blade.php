@@ -241,7 +241,7 @@ contohnya class di icon twitter di footer untuk menggunakannya kita harus beri n
                         <article id='tabs-1'>
                             <img src="{{ asset('images/training-image-01.jpg') }}" alt="Beginner Friendly">
                             <h4>Beginner Friendly</h4>
-                            <p>Ingin memulai perjalanan kebugaran Anda? Cobalah salah satu program ramah pemula ini!</p>
+                            <p>Program ini ramah pemula dengan fokus pada teknik dasar dan peningkatan secara bertahap untuk mencapai kebugaran dan kekuatan yang lebih baik.</p>
                             <!-- <div class="main-button">
                                 <a href="#">View Schedule</a>
                             </div> -->
@@ -249,8 +249,7 @@ contohnya class di icon twitter di footer untuk menggunakannya kita harus beri n
                         <article id='tabs-2'>
                             <img src="{{ asset('images/training-image-02.jpg') }}" alt="Moderate To Advanced">
                             <h4>Moderate To Advanced</h4>
-                            <p>Jika Anda mencari sesuatu yang mendorong Anda lebih keras,
-                                cobalah salah satu tantangan tingkat menengah hingga lanjutan berikut untuk membantu Anda maju lebih jauh.</p>
+                            <p>Program ini cocok bagi anda yang memiliki tingkat kebugaran sedang hingga tinggi, menawarkan tantangan dan kemajuan dalam latihan yang lebih intensif dan kompleks.</p>
                             <!-- <div class="main-button">
                                 <a href="#">View Schedule</a> -->
                             <!-- </div> -->
@@ -258,7 +257,7 @@ contohnya class di icon twitter di footer untuk menggunakannya kita harus beri n
                         <article id='tabs-3'>
                             <img src="{{ asset('images/training-image-03.jpg') }}" alt="Weight Loss">
                             <h4>Weight Loss</h4>
-                            <p>Mulailah perjalanan penurunan berat badan Anda dengan salah satu tantangan berintensitas tinggi dan akan membuat Anda berkeringat!</p>
+                            <p>Program ini didesain untuk membantu Anda dalam menurunkan berat badan dengan fokus pada pembakaran kalori yang efektif dan pengembangan kebiasaan hidup sehat.</p>
                             <!-- <div class="main-button">
                                 <a href="#">View Schedule</a>
                             </div> -->
@@ -266,7 +265,7 @@ contohnya class di icon twitter di footer untuk menggunakannya kita harus beri n
                         <article id='tabs-4'>
                             <img src="{{ asset('images/training-image-04.jpg') }}" alt="Abs">
                             <h4>Abs</h4>
-                            <p>Perut Anda akan mencintaimu dan membenci Anda pada saat yang sama! Cobalah salah satu dari program latihan yang berfokus pada inti ini.</p>
+                            <p>Program ini dirancang khusus untuk mengencangkan dan membentuk otot perut dengan latihan yang terfokus dan efektif.</p>
                             <!-- <div class="main-button"> -->
                                 <!-- <a href="#">View Schedule</a> -->
                             <!-- </div> -->
@@ -274,8 +273,7 @@ contohnya class di icon twitter di footer untuk menggunakannya kita harus beri n
                         <article id='tabs-5'>
                             <img src="{{ asset('images/training-image-01.jpg') }}" alt="Strength Training">
                             <h4>Strength Training</h4>
-                            <p>Jika Anda ingin melatih kekuatan Anda, lihatlah program berbasis resistensi ini.
-                                Active Well merekomendasikan untuk memiliki resistance band dan berbagai dumbel ringan, sedang, dan berat,</p>
+                            <p>Program latihan yang dirancang untuk meningkatkan kekuatan otot tubuh secara keseluruhan melalui penggunaan beban dan latihan yang terstruktur.</p>
                             <!-- <div class="main-button">
                                 <a href="#">View Schedule</a>
                             </div> -->
@@ -364,14 +362,13 @@ contohnya class di icon twitter di footer untuk menggunakannya kita harus beri n
                 <div class="col-lg-4">
                     <div class="trainer-item">
                         <div class="image-thumb">
-                            <img src="https://static.chloeting.com/recipes/6200d5a52e702a81e5803c59/images/baked-avocado-eggs-1.webp"
+                            <img src="https://static.chloeting.com/recipes/61fcbd362a18c23f7d7f8af3/images/vegan-curried-egg-sandwich-1.webp"
                                 alt="" style="height: 50vh; width: 100%;">
                         </div>
                         <div class="down-content">
-                            <span>Featured Recipes</span>
-                            <h4>Baked Avocado Eggs</h4>
-                            <p>Hidangan makan siang yang luar biasa memanjakan, telur panggang dalam alpukat ini cepat, lezat, dan bergizi.
-                                Hidangkan dengan roti panggang agar lebih nikmmat.
+                            <span>Meal</span>
+                            <h4>Vegan Curried Egg Sandwich</h4>
+                            <p>Salad tahu kari enak & pengganti sandwich telur kari! Bubuk kari memiliki banyak manfaat. Salad ini cocok untuk sandwich, wraps, atau topping untuk kerupuk nasi.
                             </p>
                         </div>
                     </div>
@@ -379,14 +376,13 @@ contohnya class di icon twitter di footer untuk menggunakannya kita harus beri n
                 <div class="col-lg-4">
                     <div class="trainer-item">
                         <div class="image-thumb">
-                            <img src="https://static.chloeting.com/recipes/627605807a2bc9cd25c38ebf/images/banana-oatmeal-pancakes-2.webp"
+                            <img src="https://static.chloeting.com/recipes/6386ca35e55b159b3e7520fb/images/pizza-zucchini-bites-1669777979081-1.webp"
                                 alt="" style="height: 50vh; width: 100%;">
                         </div>
                         <div class="down-content">
-                            <span>Easy Breakfast Ideas</span>
-                            <h4>Banana Oatmeal Pancakes</h4>
-                            <p>Pancake banana oat ini dibuat dengan bahan-bahan sehat dan dimaniskan secara alami.
-                            Lembut, lezat, dan jauh lebih sehat daripada pancake biasa!</p>
+                            <span>Snack</span>
+                            <h4>Pizza Zucchini Bites</h4>
+                            <p>Gigitan pizza zucchini mini yang cepat dan mudah ini memiliki semua kebaikan keju dari pizza tanpa karbohidrat. Sempurna untuk pesta atau makan malam hari kerja yang menyenangkan!</p>
                             <ul class="social-icons">
                         </div>
                     </div>
@@ -398,7 +394,7 @@ contohnya class di icon twitter di footer untuk menggunakannya kita harus beri n
                                 alt="">
                         </div>
                         <div class="down-content">
-                            <span>Healthy Drink Recipes</span>
+                            <span>Beverage</span>
                             <h4>Sugar-Free Lemonade</h4>
                             <p>Menyegarkan, menghilangkan dahaga, dan sumber vitamin C hanya dengan 2 bahan!</p>
                         </div>
@@ -449,33 +445,33 @@ contohnya class di icon twitter di footer untuk menggunakannya kita harus beri n
                     <!-- Grid column -->
 
                     <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <!-- <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
 
-                        <!-- Facebook -->
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!"
-                            role="button"><i class="fab fa-facebook-f"></i></a>
+                        Facebook -->
+                        <!-- <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!"
+                            role="button"><i class="fab fa-facebook-f"></i></a> -->
 
                         <!-- Twitter -->
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!"
-                            role="button"><i class="fab fa-twitter"></i></a>
+                        <!-- <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!"
+                            role="button"><i class="fab fa-twitter"></i></a> -->
 
                         <!-- Google -->
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!"
-                            role="button"><i class="fab fa-google"></i></a>
+                        <!-- <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!"
+                            role="button"><i class="fab fa-google"></i></a> -->
 
                         <!-- Instagram -->
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!"
-                            role="button"><i class="fab fa-instagram"></i></a>
+                        <!-- <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!"
+                            role="button"><i class="fab fa-instagram"></i></a> -->
 
                         <!-- Linkedin -->
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!"
-                            role="button"><i class="fab fa-linkedin-in"></i></a>
+                        <!-- <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!"
+                            role="button"><i class="fab fa-linkedin-in"></i></a> -->
                         <!-- Github -->
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!"
+                        <!-- <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!"
                             role="button"><i class="fab fa-github"></i></a>
                     </div>
-                </div>
+                </div> -->
                 <!--Grid row-->
             </section>
             <!-- Section: Links -->

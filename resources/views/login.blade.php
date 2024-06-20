@@ -32,11 +32,8 @@
     @csrf
     <h1>Create Account</h1>
     <div class="social-container">
-        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-        <a href="#" class="social"><i class="fab fa-twitter"></i></a>
     </div>
-    <span>or use your email for registration</span>
+    <!-- <span>or use your email for registration</span> -->
     <input type="hidden" name="ID_user" value="auto" id="ID_user">
     <input type="text" placeholder="First Name" id="first_name" name="first_name" />
     <input type="text" placeholder="Last Name" id="last_name" name="last_name" />
@@ -44,7 +41,7 @@
     <input type="hidden" name="is_user" value="1">
     <input type="password" placeholder="Password" id="password" name="password" />
     <input type="password" placeholder="Confirm Password" id="confirm_password" name="confirm_password" />
-    <input type="text" list="genderList" name="jenis_kelamin" id="jenis_kelamin">
+    <input type="text" list="genderList" placeholder="Gender" name="jenis_kelamin" id="jenis_kelamin">
     <datalist id="genderList">
         <option value="laki-laki">
         <option value="perempuan">
@@ -52,24 +49,20 @@
     <button type="submit" value="Create">Sign Up</button>
 </form>
 
+</div>
+<div class="form-container sign-in-container">
+    <form action="{{ route('auth') }}" method="post">
+        @method('POST')
+        @csrf
+        <h1>Sign in</h1>
+        <div class="social-container">
         </div>
-        <div class="form-container sign-in-container">
-            <form action="{{ route('auth') }}" method="post">
-                @method('POST')
-                @csrf
-                <h1>Sign in</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-twitter"></i></a>
-                </div>
-                <span>or use your account</span>
-                <input type="email" placeholder="Email" id="email" name="email" />
-                <input type="password" placeholder="Password" id="password" name="password" />
-                <a href="#">Forgot your password?</a>
-                <button type="submit">Sign In</button>
-            </form>
-        </div>
+        <input type="email" placeholder="Email" id="email" name="email" />
+        <input type="password" placeholder="Password" id="password" name="password" />
+        <!-- <a href="#">Forgot your password?</a> -->
+        <button type="submit">Sign In</button>
+    </form>
+        </div>
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
