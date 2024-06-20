@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\CategoriesVideo;
 use App\Models\Program;
+use Illuminate\Support\Facades\Log;
 
 class VideoController extends Controller
 {
@@ -66,19 +67,41 @@ class VideoController extends Controller
         return view('admin.editVideo', compact('video', 'cat', 'prog'));
     }
 
+    
     public function update(Request $request, $id)
     {
-        // Mengambil video berdasarkan ID
-        $video = Video::findOrFail($id);
+        try {
+            // Temukan recipe berdasarkan ID
+            $video = Video::findOrFail($id);
 
-        // Memperbarui video dengan data yang diberikan
-        $video->update($request->except('categories', 'program'));
+            // Jika ada gambar yang diunggah
+            if ($request->hasFile('gambar_video')) {
+                // Hapus gambar lama jika ada
+                if ($video->gambar_video) {
+                    Storage::disk('public')->delete($video->gambar_video);
+                }
 
-        // Menyinkronkan categories dan program dengan data yang diberikan
-        $video->categories()->sync($request->input('categories', []));
-        $video->program()->sync($request->input('program', []));
+                // Simpan gambar baru
+                $path = $request->file('gambar_video')->store('video_image', 'public');
+                $video->gambar_video = $path;
+            }
 
-        // Redirect ke halaman admin/video
-        return redirect()->intended('admin/video');
+            // Update data recipe
+            $video->judul_video = $request->judul_video;
+            $video->durasi_video = $request->durasi_video;
+            $video->deskripsi_video = $request->deskripsi_video;
+            $video->url_video = $request->url_video;
+            $video->save();
+
+            // Sinkronkan kategori
+            $video->categories()->sync($request->input('categories', []));
+
+            // Redirect ke halaman yang diinginkan setelah berhasil update
+            return redirect()->intended('admin/video');
+        } catch (\Exception $e) {
+            // Tangani exception di sini, misalnya log dan kembalikan pesan kesalahan
+            Log::error('Error updating video: ' . $e->getMessage());
+            return back()->withError('Gagal mengupdate video. Silakan coba lagi.');
+        }
     }
 }

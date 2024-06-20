@@ -303,7 +303,7 @@ contohnya class di icon twitter di footer untuk menggunakannya kita harus beri n
                         <div class="image-thumb">
                             <a href="https://www.youtube.com/watch?v=2MoGxae-zyo">
                                 <img
-                                    src="https://static.chloeting.com/videos/61bbdc7e2cb3b78eb6ac2bba/efca6f80-5ed1-11ec-b182-df31ae6aab45.jpeg">
+                                    src= "{{ asset('images/dothis.jpeg') }}" alt="">
                             </a>
                         </div>
                         <div class="down-content">
@@ -318,7 +318,7 @@ contohnya class di icon twitter di footer untuk menggunakannya kita harus beri n
                         <div class="image-thumb">
                             <a href="https://www.youtube.com/watch?v=-p0PA9Zt8zk">
                                 <img
-                                    src="https://static.chloeting.com/videos/61bbf59552c5c9bf0f2550eb/e43a1620-5ee0-11ec-9a04-3fd984621d67.jpeg">
+                                    src="{{ asset('images/warmup.jpeg') }}" alt="">
                             </a>
                         </div>
                         <div class="down-content">
@@ -332,7 +332,7 @@ contohnya class di icon twitter di footer untuk menggunakannya kita harus beri n
                     <div class="trainer-item">
                         <a href="https://www.youtube.com/watch?v=6TmQiugy_qw">
                             <img
-                                src="https://static.chloeting.com/videos/61bbd89dc3d293024898b84d/9ff668d0-5ecf-11ec-b8cd-2976cd667d03.jpeg">
+                                src="{{ asset('images/abs.jpeg') }}" alt="">
                         </a>
                         <div class="down-content">
                             <span>Abs</span>
